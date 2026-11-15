@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Build AI literacy and coding skills while making informed choices guided by your values. One-to-one tutoring in Sooke and the Westshore.">
   <meta name="theme-color" content="#0b1229">
-  <title>Responsible AI Coding | Sooke &amp; Westshore</title>
+  <title>Values Aligned Coding | Sooke &amp; Westshore</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
@@ -47,10 +47,22 @@
     h2 { margin-bottom: 18px; font-size: clamp(2.2rem, 4vw, 3.5rem); }
     .section-heading p:last-child { color: var(--muted); font-size: 1.06rem; }
     .learning { background: #111b35; border-block: 1px solid var(--line); }
-    .cards { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-    .card { padding: 26px 23px 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .card-icon { display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 20px; border: 1px solid #39617b; color: var(--cyan); }
-    .card-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    .cards { overflow: hidden; border: 1px solid #4d526b; border-radius: 10px; background: #1b2032; }
+    .editor-bar { display: flex; align-items: center; gap: 16px; padding: 14px 22px; border-bottom: 1px solid #4d526b; background: #292538; color: #d3c4d2; font-family: Consolas, monospace; font-size: .85rem; }
+    .editor-dots { display: flex; gap: 6px; }
+    .editor-dots span { width: 8px; height: 8px; border-radius: 50%; background: #d49e93; }
+    .editor-dots span:nth-child(2) { background: #d8be8d; }
+    .editor-dots span:nth-child(3) { background: #91b9ad; }
+    .card { position: relative; padding: 24px 28px 24px 72px; border-bottom: 1px solid #383e55; }
+    .card:last-child { border-bottom: 0; }
+    .card-icon { position: absolute; top: 25px; left: 25px; color: #ffd0b5; }
+    .card:nth-of-type(2) .card-icon { color: #a7e8d9; }
+    .card:nth-of-type(3) .card-icon { color: #ffc7b7; }
+    .card:nth-of-type(4) .card-icon { color: #c9caff; }
+    .card-icon svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+    .card h3 { margin-bottom: 8px; color: #f3d0b8; font-family: Consolas, monospace; font-size: 1.15rem; }
+    .code-comment { color: #9eacbf; }
+    .card p { max-width: 70ch; }
     h3 { margin-bottom: 12px; font-size: 1.08rem; line-height: 1.35; }
     .card p, .bio-copy { color: var(--muted); font-size: .98rem; }
     .card p { margin-bottom: 0; }
@@ -69,13 +81,14 @@
     .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
     @media (max-width: 850px) {
       .hero { padding: 70px 0 50px; }
-      .cards { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 560px) {
       .wrap { width: calc(100% - 36px); }
       .nav { min-height: 72px; }
       .section { padding: 65px 0; }
-      .cards, .tutor-profile { grid-template-columns: 1fr; }
+      .tutor-profile { grid-template-columns: 1fr; }
+      .card { padding-right: 20px; padding-left: 60px; }
+      .card-icon { left: 19px; }
       .tutor-profile { gap: 24px; }
       .profile-heading { gap: 18px; }
       .profile-photo { width: 90px; height: 90px; flex-basis: 90px; }
@@ -87,7 +100,7 @@
 <body>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>Responsible<br>AI Coding</span></a>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>Values Aligned<br>Coding</span></a>
     </div>
   </header>
 
@@ -110,24 +123,28 @@
           <p>Bring an idea or something you're already working on. Learn at your own pace through four areas:</p>
         </div>
         <div class="cards">
+          <div class="editor-bar" aria-hidden="true">
+            <span class="editor-dots"><span></span><span></span><span></span></span>
+            <span>your-project.notes</span>
+          </div>
           <article class="card">
             <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M8.2 14.5a7 7 0 1 1 7.6 0c-.8.5-1.3 1.3-1.3 2.5h-5c0-1.2-.5-2-1.3-2.5Z"/></svg></span>
-            <h3>Understand AI</h3>
-            <p>Explore how AI works, what it learns from, and its impact on people and the environment.</p>
+            <h3><span class="code-comment" aria-hidden="true">// </span>Understand AI</h3>
+            <p>Explore how AI works, what it learns from and its impact on people and the environment. Learn to keep your own creativity at the centre while benefiting from AI.</p>
           </article>
           <article class="card">
             <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h10m4 0h2M4 17h2m4 0h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg></span>
-            <h3>Choose your tools</h3>
+            <h3><span class="code-comment" aria-hidden="true">// </span>Choose your tools</h3>
             <p>Explore open-source, cloud-based and locally run AI tools that fit your values, budget and goals.</p>
           </article>
           <article class="card">
             <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-2-12-4 14"/></svg></span>
-            <h3>Build your project</h3>
+            <h3><span class="code-comment" aria-hidden="true">// </span>Build your project</h3>
             <p>Bring your ideas to life while learning to read, question and test your code.</p>
           </article>
           <article class="card">
             <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 9A7 7 0 0 1 18 7l2 5M4 12l2 5a7 7 0 0 0 12.5-2"/></svg></span>
-            <h3>Make it yours</h3>
+            <h3><span class="code-comment" aria-hidden="true">// </span>Make it yours</h3>
             <p>Learn to maintain, secure and independently develop what you've built.</p>
           </article>
         </div>
@@ -164,7 +181,7 @@
   </main>
   <footer>
     <div class="wrap footer-inner">
-      <span>Responsible AI Coding</span>
+      <span>Values Aligned Coding</span>
       <span>Learning with curiosity and care in Sooke &amp; the Westshore.</span>
     </div>
   </footer>
