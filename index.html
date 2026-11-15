@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build AI literacy and coding skills while making informed choices guided by your values. One-to-one tutoring in Sooke and the Westshore.">
+  <meta name="theme-color" content="#0b1229">
+  <title>Responsible AI Coding | Sooke &amp; Westshore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f0f5ff;
+      --muted: #b6c4df;
+      --paper: #0b1229;
+      --cyan: #66e4ed;
+      --line: #304466;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Open Sans", "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
+    .wrap { width: min(1180px, calc(100% - 48px)); margin: auto; }
+    header { border-bottom: 1px solid var(--line); }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 700; font-size: .9rem; line-height: 1.2; }
+    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #39718b; color: var(--cyan); font-family: Consolas, monospace; font-size: 17px; }
+    .hero { padding: 110px 0 70px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2 { font-weight: 700; letter-spacing: -.045em; line-height: 1.12; }
+    h1 { max-width: 980px; margin-bottom: 26px; font-size: clamp(2.9rem, 5.5vw, 5.1rem); }
+    h1 em { color: var(--cyan); font-style: normal; }
+    .intro { max-width: 780px; color: var(--muted); font-size: 1.12rem; }
+    .intro p:last-child { margin-bottom: 0; }
+    .section { padding: 90px 0; }
+    .section-heading { max-width: 700px; margin-bottom: 44px; }
+    h2 { margin-bottom: 18px; font-size: clamp(2.2rem, 4vw, 3.5rem); }
+    .section-heading p:last-child { color: var(--muted); font-size: 1.06rem; }
+    .learning { background: #111b35; border-block: 1px solid var(--line); }
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .card { padding: 26px 23px 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .card-icon { display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 20px; border: 1px solid #39617b; color: var(--cyan); }
+    .card-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+    h3 { margin-bottom: 12px; font-size: 1.08rem; line-height: 1.35; }
+    .card p, .bio-copy { color: var(--muted); font-size: .98rem; }
+    .card p { margin-bottom: 0; }
+    .question-link { display: inline-block; margin-top: 32px; color: var(--cyan); font-weight: 700; }
+    .tutor-profile { display: grid; grid-template-columns: 1fr 1fr; gap: 8%; margin: 32px 0; padding-bottom: 32px; border-bottom: 1px solid #4e557f; }
+    .profile-heading { display: flex; align-items: center; gap: 24px; }
+    .profile-photo { width: 120px; height: 120px; flex: 0 0 120px; border: 2px solid #8a9fc3; border-radius: 50%; object-fit: cover; }
+    .profile-heading h3 { margin: 0; font-size: clamp(1.5rem, 2.7vw, 2rem); }
+    .contact-details { margin-top: 24px; color: #e0e8f7; }
+    .contact-details p { margin: 8px 0; }
+    .contact { padding: 65px; border: 1px solid #4e557f; background: linear-gradient(115deg, #17294b, #261e49); }
+    .contact a { color: var(--cyan); }
+    .contact h2 { max-width: 700px; }
+    .contact p:last-child { max-width: 670px; margin-bottom: 0; color: #c5cfe3; }
+    footer { padding: 33px 0; color: var(--muted); font-size: .85rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+    @media (max-width: 850px) {
+      .hero { padding: 70px 0 50px; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: calc(100% - 36px); }
+      .nav { min-height: 72px; }
+      .section { padding: 65px 0; }
+      .cards, .tutor-profile { grid-template-columns: 1fr; }
+      .tutor-profile { gap: 24px; }
+      .profile-heading { gap: 18px; }
+      .profile-photo { width: 90px; height: 90px; flex-basis: 90px; }
+      .contact { padding: 36px 26px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>Responsible<br>AI Coding</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <h1>Learn to code with AI, <em>without leaving your values behind.</em></h1>
+        <div class="intro">
+          <p>Build something of your own with Emma Irwin, an experienced software engineer and AI ethics practitioner.</p>
+          <p>One-to-one tutoring for youth and adults in Sooke. Beginners welcome.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section learning" id="learn">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2>What would you love to build?</h2>
+          <p>A game, an AI agent, a website, a creative coding project, or an app that helps your community?</p>
+          <p>Bring an idea or something you're already working on. Learn at your own pace through four areas:</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M8.2 14.5a7 7 0 1 1 7.6 0c-.8.5-1.3 1.3-1.3 2.5h-5c0-1.2-.5-2-1.3-2.5Z"/></svg></span>
+            <h3>Understand AI</h3>
+            <p>Explore how AI works, what it learns from, and its impact on people and the environment.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h10m4 0h2M4 17h2m4 0h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></svg></span>
+            <h3>Choose your tools</h3>
+            <p>Explore open-source, cloud-based and locally run AI tools that fit your values, budget and goals.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-2-12-4 14"/></svg></span>
+            <h3>Build your project</h3>
+            <p>Bring your ideas to life while learning to read, question and test your code.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M5.5 9A7 7 0 0 1 18 7l2 5M4 12l2 5a7 7 0 0 0 12.5-2"/></svg></span>
+            <h3>Make it yours</h3>
+            <p>Learn to maintain, secure and independently develop what you've built.</p>
+          </article>
+        </div>
+        <a class="question-link" href="big-questions.html">Big questions, practical choices &rarr;</a>
+      </div>
+    </section>
+
+    <div class="section">
+    <section class="wrap" aria-labelledby="contact-title">
+      <div class="contact">
+        <h2 id="contact-title">Learn with Emma</h2>
+        <div class="tutor-profile">
+          <div class="profile-heading">
+            <img class="profile-photo" src="avatar_3420266_optimized.avif" alt="Emma Irwin" width="120" height="120">
+            <h3>Emma Irwin</h3>
+          </div>
+          <div>
+            <p class="bio-copy">Emma has over 20 years of experience in software and open-source technology, including work with Microsoft, Mozilla, Benetech and Royal Roads University. She now runs her own technology consultancy and stewards projects focused on AI ethics.</p>
+            <p class="bio-copy">From training engineers to teaching kids to code for over a decade, Emma believes in education as a means of empowerment and loves helping learners experience those wonderful "aha!" moments.</p>
+          </div>
+        </div>
+        <p>Start with a single session or explore a project over four sessions.</p>
+        <div class="contact-details">
+          <p><strong>$65 CAD / hour</strong></p>
+          <p><strong>Four one-hour sessions: $234 CAD</strong> (10% off)</p>
+          <p><strong>Free 20&ndash;30 minute introductory call.</strong> Remote option available.</p>
+        </div>
+        <p>In-person tutoring in Sooke.</p>
+        <p><a href="laptop-requirements.html">Laptop requirements and pre-lesson setup</a></p>
+      </div>
+    </section>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap footer-inner">
+      <span>Responsible AI Coding</span>
+      <span>Learning with curiosity and care in Sooke &amp; the Westshore.</span>
+    </div>
+  </footer>
+</body>
+</html>
